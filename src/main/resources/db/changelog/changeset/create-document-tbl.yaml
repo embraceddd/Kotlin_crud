@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-document
+      author: embraceddx
+      changes:
+        - createTable:
+            tableName: documents
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: date
+                  type: date
+              - column:
+                  name: entity_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: entity

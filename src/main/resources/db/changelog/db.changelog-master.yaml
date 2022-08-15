@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-entity-tbl.yaml
+  - include:
+      file: db/changelog/changeset/create-document-tbl.yaml
+  - include:
+      file: db/changelog/changeset/create-dictionary-tbl.yaml

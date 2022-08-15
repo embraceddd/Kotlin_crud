@@ -1,0 +1,13 @@
+spring:
+  liquibase:
+    enabled: true
+    clear-checksums: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kotlin_demo_db
+    username: postgres
+    password: 123post
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none

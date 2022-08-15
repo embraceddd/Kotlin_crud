@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-dictionary
+      author: embraceddx
+      changes:
+        - createTable:
+            tableName: dictionary
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: dictionary_value_name
+                  type: uuid
+              - column:
+                  name: entity_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: entity
